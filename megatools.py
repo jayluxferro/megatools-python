@@ -6,7 +6,7 @@ Email:  jayluxferro@sperixlabs.org, jay@ovond.com
 Date:   23rd August, 2019
 """
 
-import subprocess
+import helper as hp
 import os
 
 class Mega:
@@ -22,8 +22,5 @@ class Mega:
         self.configPath = configPath
     
     def df(self, f='g'):
-        if f.lower() == 'm':
-            f = '--mb'
-        else:
-            f = '--gb'
-        subprocess.call([self.megaPath + 'megadf', f, '--config', self.configPath])
+        f = '--mb' if f.lower() == 'm' else '--gb'
+        return hp.formatDf([self.megaPath + 'megadf', f, '--config', self.configPath])
