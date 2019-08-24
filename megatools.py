@@ -24,3 +24,6 @@ class Mega:
     def df(self, f='g'):
         f = '--mb' if f.lower() == 'm' else '--gb'
         return hp.formatDf([self.megaPath + 'megadf', f, '--config', self.configPath])
+
+    def ls(self, path='/'):
+        return hp.ls([self.megaPath + 'megals', '--config', self.configPath, path if path[0] == '/' else '/' + path])

@@ -19,3 +19,10 @@ def formatDf(command):
         d = x.decode().split(':')
         res.update({ d[0].lower() : d[-1].strip() })
     return res
+
+def ls(command):
+    output = cli(command)
+    res = []
+    for x in output.splitlines():
+        res.append(x.decode())
+    return res
