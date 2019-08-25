@@ -76,5 +76,5 @@ m.url('/Root/Documents/test.pdf')
 ```
 10. Download file using the mega link
 ```
-m.dl('https://mega.nz/\#\!2eoEhAaS\!olmfrMsNeyLiifXu6D6ps9CD7ePYSYGCSjEYAoiQl4')
+m.dl('https://mega.nz/#!2eoEhAaS!olmfrMsNeyLiifXu6D6ps9CD7ePYSYGCSjEYAoiQl4')
 ```
