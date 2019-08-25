@@ -42,19 +42,19 @@ To display used or free space in gigabytes,
 ```
 m.df('/Root', 'g')
 ```
-2. List directories
+2. List directories.
 ```
 m.ls('/Root/Games')
 ```
-3. Upload a file
+3. Upload a file.
 ```
 m.put('/Users/jay/Desktop/test.pdf', '/Root')
 ```
-4. Remove a file or directory
+4. Remove a file or directory.
 ```
 m.rm('/Root/Games')
 ```
-5. Make a directory
+5. Make a directory.
 ```
 m.md('/Root/Codes')
 ```
@@ -70,11 +70,11 @@ m.copy('/Users/jay/Desktop/Codes', '/Root/Codes', download=True)
 ```
 m.get('/Root/Documents/test.pdf')
 ```
-9. Get file download link
+9. Get file download link.
 ```
 m.url('/Root/Documents/test.pdf')
 ```
-10. Download file using the mega link
+10. Download file using the mega link.
 ```
 m.dl('https://mega.nz/#!2eoEhAaS!olmfrMsNeyLiifXu6D6ps9CD7ePYSYGCSjEYAoiQl4')
 ```
