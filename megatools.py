@@ -27,3 +27,6 @@ class Mega:
 
     def ls(self, path='/'):
         return hp.ls([self.megaPath + 'megals', '--config', self.configPath, path if path[0] == '/' else '/' + path])
+
+    def put(self, fileName, serverPath='/Root'):
+        return hp.put([self.megaPath + 'megaput', '--config', self.configPath, '--path', serverPath, fileName])

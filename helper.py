@@ -26,3 +26,16 @@ def ls(command):
     for x in output.splitlines():
         res.append(x.decode())
     return res
+
+def put(command):
+    output = cli(command).decode().lower()
+    
+    if output.find('exists') != -1:
+        return { 'status': 'error', 'message': 'File already exists' }
+
+    elif output.find('error') != -1:
+        return { 'status': 'error', 'message': 'Process failed' }
+
+    else:
+        return { 'status': 'ok', 'message': 'Process completed' }
+    
