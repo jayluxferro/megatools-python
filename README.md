@@ -18,3 +18,17 @@
   Proxy = socks5://127.0.0.1:9050
   ParallelTransfers = 2
 ```
+
+## Usage
+
+### Creating default instance
+1. Using default `/usr/local/bin` directory for binary files and `mega.rc` file in current working directory.
+```
+from megatools import Mega
+m = Mega()
+```
+2. Passing binary directory path and `mega.rc` location.
+```
+from megatools import Mega
+m = Mega(megaPath='/usr/local/bin/', configPath='/Users/jay/mega.rc')
+```
