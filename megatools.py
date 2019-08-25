@@ -30,3 +30,22 @@ class Mega:
 
     def put(self, fileName, serverPath='/Root'):
         return hp.put([self.megaPath + 'megaput', '--config', self.configPath, '--path', serverPath, fileName])
+
+    def rm(self, filePath):
+        return hp.rm([self.megaPath + 'megarm', '--config', self.configPath, filePath])
+
+    def md(self, directoryPath):
+        return hp.md([self.megaPath + 'megamkdir', '--config', self.configPath, directoryPath])
+
+    def copy(self, localDirectoryPath, remoteDirectoryPath, download=False):
+        download = '' if not download else '--download'
+        return hp.copy([self.megaPath + 'megacopy', '--config', self.configPath, '--local', localDirectoryPath, '--remote', remoteDirectoryPath, download])
+
+    def get(self, remoteFile):
+        return hp.get([self.megaPath + 'megaget', '--config', self.configPath, remoteFile])
+
+    def url(self, remoteFile):
+        return hp.url([self.megaPath + 'megals', '--config', self.configPath, remoteFile, '--export'])
+
+    def dl(self, url):
+        return hp.dl([self.megaPath + 'megadl', '--config', self.configPath, url])
